@@ -9,14 +9,23 @@
 </style>
 </head>
 <body>
-<header><div class="wrap"><div><strong style="font:700 1.35rem 'Bricolage Grotesque'">GenEdit · Administración</strong><div class="muted">Gestiona análisis y noticias</div></div><div class="actions" style="margin:0"><a class="btn secondary" href="./index.html">Ver web</a><button id="logout" class="btn secondary hidden">Cerrar sesión</button></div></div></header>
+<header><div class="wrap"><div><strong style="font:700 1.35rem 'Bricolage Grotesque'">GenEdit · Administración</strong><div class="muted">Gestiona análisis y noticias y leyes</div></div><div class="actions" style="margin:0"><a class="btn secondary" href="./index.html">Ver web</a><button id="logout" class="btn secondary hidden">Cerrar sesión</button></div></div></header>
 <main class="wrap">
 <section id="loginPanel" class="panel"><h1>Acceso privado</h1><p class="muted">Inicia sesión con la cuenta administradora creada en Supabase. No hay registro público.</p><form id="loginForm" class="formgrid"><div class="field wide"><label for="email">Correo electrónico</label><input id="email" type="email" autocomplete="username" required></div><div class="field wide"><label for="password">Contraseña</label><input id="password" type="password" autocomplete="current-password" required></div><div class="wide"><button class="btn" type="submit">Entrar</button></div></form></section>
 <section id="appPanel" class="hidden">
 <div id="status" class="status hidden" role="status"></div>
 <div class="panel"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap"><div><h1 style="margin-bottom:4px">Publicaciones</h1><p class="muted" style="margin-top:0">Crea un borrador o publícalo para que aparezca en la web.</p></div><button id="newBtn" class="btn">+ Nueva publicación</button></div><div id="postsList"><p class="muted">Cargando…</p></div></div>
 <div id="editorPanel" class="panel hidden"><h2 id="editorTitle">Nueva publicación</h2><form id="postForm"><input id="postId" type="hidden"><div class="formgrid">
-<div class="field"><label for="tipo">Tipo</label><select id="tipo"><option value="analisis">Análisis</option><option value="noticia">Noticia</option></select></div>
+
+<div class="field">
+  <label for="tipo">Tipo de publicación</label>
+  <select id="tipo" required>
+    <option value="analisis">Análisis</option>
+    <option value="noticia">Noticia</option>
+    <option value="ley">Ley y normativa</option>
+  </select>
+</div>
+
 <div class="field"><label for="categoria">Categoría</label><input id="categoria" placeholder="Investigación, Ensayos clínicos, Regulación…" required></div>
 <div class="field wide"><label for="titulo">Título</label><input id="titulo" maxlength="180" required></div>
 <div class="field wide"><label for="resumen">Resumen para las tarjetas</label><textarea id="resumen" rows="3" style="min-height:80px" required></textarea></div>
