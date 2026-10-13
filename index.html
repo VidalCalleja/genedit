@@ -137,7 +137,7 @@ addEventListener("hashchange",render);render();
 <script>
 // Configuración pública: usa la URL del proyecto y la clave anon/publishable de Supabase.
 // Nunca pongas aquí la service_role key. La seguridad depende de RLS en la base de datos.
-const GENEDIT_SUPABASE_URL = "https://ztkldyjncoiwkbjxfopm.supabase.co/rest/v1/";
+const GENEDIT_SUPABASE_URL = "https://ztkldyjncoiwkbjxfopm.supabase.co";
 const GENEDIT_SUPABASE_ANON_KEY = "sb_publishable_HPe-kjYKVj-KmreTtt_byA_ndeK2UKV";
 (async function loadGenEditPosts(){
   if (!window.supabase || GENEDIT_SUPABASE_URL.startsWith("PEGA_AQUI") || GENEDIT_SUPABASE_ANON_KEY.startsWith("PEGA_AQUI")) {
